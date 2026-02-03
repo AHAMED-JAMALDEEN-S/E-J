@@ -10,22 +10,26 @@ body{
     margin: 0 25px 0 25px;
     display: grid;
     grid-template-areas: 
-    "header"
-    "main"
-    "footer";
-    grid-template-rows: auto 1fr auto;
+    "header main"
+    "footer footer";
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 20% 80%;
     min-height: 100dvh;
 }
 
 header{
     grid-area: header;
+    border: 4px solid white;
+}
+
+.logo, .chat-history{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
 .logo img{
-    width: 100px;
+    width: 80px;
     height: auto;
     margin: 10px 20px;
 }
@@ -33,14 +37,32 @@ header{
 main{
     grid-area: main;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "chat-window"
+    "chat-input";
+    grid-template-rows: 3fr 1fr;
+    border: 4px solid white;
 }
 
+.chat-window{
+    grid-area: chat-window;
+    border: 4px solid white;
+    margin: 50px; 
+    display: grid;
+    place-items: center;
+}
+
+.chat-input{
+    grid-area: chat-input;
+    border: 4px solid white; 
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 footer{
     grid-area: footer;
     text-align: center;
-    padding: 10px 0;
-    font-size: 0.9rem;
-    color: #888;
+    border: 4px solid white;
 }
