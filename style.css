@@ -36,53 +36,11 @@ main{
     grid-template-columns: 1fr 1fr;
 }
 
-.under-construction {
-  min-height: 120vh;
-  background: #0f172a; /* dark modern background */
-  color: #e5e7eb;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-family: 'Inter', sans-serif;
-  padding: 20px;
-}
 
-.under-construction .icon {
-  font-size: 64px;
-  margin-bottom: 16px;
-}
-
-.under-construction h1 {
-  font-size: 2.2rem;
-  margin-bottom: 10px;
-}
-
-.under-construction p {
-  font-size: 1rem;
-  color: #94a3b8;
-  max-width: 420px;
-}
-
-.flowchart{
-    min-height: 70vh;
-}
-.flowchart img{
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-}
 footer{
     grid-area: footer;
     text-align: center;
     padding: 10px 0;
     font-size: 0.9rem;
     color: #888;
-}
-
-@media only screen and (max-width: 768px){
-    main{
-        grid-template-columns: 1fr;
-    }
 }
